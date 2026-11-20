@@ -9,12 +9,12 @@ A Next.js, Supabase and Stripe subscription-payments app, still the unmodified V
 
 The code in this repo is the stock starter. Today it provides:
 
-- Sign in and sign up with Supabase Auth (email and GitHub OAuth), routes `/signin`, `/signin/[id]`, `/auth/callback` and `/auth/reset_password`.
+- Sign in and sign up with Supabase Auth (email magic link, email and password, and GitHub OAuth), routes `/signin`, `/signin/[id]`, `/auth/callback` and `/auth/reset_password`.
 - A pricing page at `/` that lists Stripe products and prices synced into Postgres, with Stripe Checkout to subscribe.
 - An `/account` page for the signed-in user, with the Stripe customer portal link.
 - A Stripe webhook endpoint at `/api/webhooks` that keeps products, prices, customers and subscriptions in Supabase in sync.
 
-The idea behind the name is a guess: a paid MyCTO app. No code in the repo says so.
+The idea behind the name is a guess: a paid MyCTO app **(inference)**. No code in the repo says so.
 
 ## How it works
 
@@ -49,7 +49,7 @@ The original upstream setup guide (Vercel deploy button, Supabase and Stripe das
 
 ## Project history
 
-- 2024-06-29: "Initial commit", the only commit, made through the GitHub web UI. The same tree was created as three sibling repos within three days (`grooveroom.club`, `walletbot.dev`, `mycto.app2`); their file contents are byte-identical.
+- 2024-06-29: "Initial commit", the only commit, made by Vercel's new-project flow (commit body: "Created from https://vercel.com/new"), so a Vercel project was linked at creation. The same tree was created as three sibling repos within three days (`grooveroom.club`, `walletbot.dev`, `mycto.app2`); their file contents are byte-identical.
 
 See [docs/STATUS.md](docs/STATUS.md) for current state.
 

@@ -10,6 +10,7 @@ Unverified. The code is the upstream Vercel starter, which is known to work when
 
 - Not run in this pass except where noted below.
 - Build almost certainly fails without env vars: the code is byte-identical to walletbot.dev, whose `pnpm build` stops with `Error: supabaseUrl is required` at `/api/webhooks` when Supabase env vars are unset. Not built for this repo **(inference)**.
+- The Vercel preview of the docs PR fails because `NEXT_PUBLIC_SUPABASE_URL` and the other vars from `.env.local.example` are not set in the Vercel project **(inference: Vercel logs not read)**. Not caused by this docs-only PR.
 - Page title and metadata still say "Next.js Subscription Starter"; no mycto.app2 branding.
 - No product features beyond the starter's pricing, sign-in and account pages.
 - No tests, no CI (`.github/` is absent).
